@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise</title>
+    <link rel="shortcut icon" href="https://media.istockphoto.com/id/1439973042/vector/red-heart-flat-icon-the-symbol-of-love-vector-illustration.jpg?s=612x612&w=0&k=20&c=i2vL1DR3XaqPcLAUBiaQzeQOj8uqksXED6wI66MO3h0=" type="image/x-icon">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background-color: #f0e4d7;
+            font-family: 'Arial', sans-serif;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            color: #ff6347;
+        }
+        p {
+            color: #555;
+        }
+        .big-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1%;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff6347;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #e55337;
+        }
+        .salute {
+            max-width: 10%;
+        }
+        @keyframes salute {
+   0% {
+      opacity: 0;
+   }
+   50% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+.salute {
+   animation: salute 1s infinite;
+}
+    </style>
+</head>
+<body>
+
+    <div class="big-card">
+        <img src="https://img-fotki.yandex.ru/get/42618/200418627.14d/0_1692fe_e383058d_orig.png" alt="Heart" class="salute">
+        <div class="card">
+            <h1>СЮРПРИЗ</h1>
+            <p>Нажми на кнопку ниже, чтобы увидеть сюрприз!</p>
+            <button class="btn" onclick="showMessage()">Показать Сюрприз</button>
+            <div id="message" style="display: none; margin-top: 20px;">
+                <p>Просто хотел напомнить, как ты важен для меня. Рад, если этот маленький подарок поднял тебе настроение. Спасибо, что ты есть.
+                  <br>
+                  С любовью и теплом
+                  </p>
+            </div>
+        </div>
+        <img src="https://img-fotki.yandex.ru/get/42618/200418627.14d/0_1692fe_e383058d_orig.png" alt="Heart" class="salute">
+    </div>
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
